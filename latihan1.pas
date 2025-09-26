@@ -1,23 +1,21 @@
-program biodata;
+program Lingkaran;
 uses crt;
 
-var
-    nama: string;
-    NIM: string;
-    kom: char;
-    alamat: string;
+const
+    pi = 3.14;
 
+var
+    r : real;
+    luas, keliling : real;
 begin
     clrscr;
 
-    write('Masukkan nama Anda: ');
-    readln(nama);
-    write('Masukkan NIM Anda: ');
-    readln(NIM);
-    write('Masukkan Kom Anda: ');
-    readln(kom);
-    write('Masukkan Alamat Anda: ');
-    readln(alamat);
+    write('Masukkan jari-jari lingkaran: ');
+    readln(r);
 
-    writeln('Hallo, Nama saya ', nama, ', NIM saya ', NIM, ', saya di kom ', kom, ', alamat saya di ', alamat, ' Salam Kenal Semua!');
+    luas := pi * r * r;
+    keliling := 2 * pi * r;
+
+    writeln('Luas lingkaran: ', luas:0:2);
+    writeln('Keliling lingkaran: ', keliling:0:2);
 end.
